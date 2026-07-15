@@ -661,6 +661,27 @@ const Page = {
                     if (target) target.style.display = 'block';
                 });
             });
+
+            // Load all bids
+            try {
+                const allBids = await Api.getAllBids();
+                const bidsBody = document.getElementById('admin-bids-body');
+                if (bidsBody) {
+                    bidsBody.innerHTML = allBids.map(b => `
+                        <tr>
+                            <td>${b.id.slice(0, 8)}...</td>
+                            <td><strong>${b.user_name}</strong></td>
+                            <td>${b.user_email}</td>
+                            <td><strong>${b.auction_title}</strong></td>
+                            <td>${b.auction_category}</td>
+                            <td><strong>${formatCurrency(b.amount)}</strong></td>
+                            <td>${timeAgo(b.created_at)}</td>
+                        </tr>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error('Error loading bids:', error);
+            }
         } catch (error) {
             console.error('Error loading admin:', error);
             Toast.show('Failed to load admin panel', 'error');

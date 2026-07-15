@@ -133,5 +133,9 @@ const ApiService = {
         return await this.request(`/admin/users/${userId}`, {
             method: 'DELETE'
         });
+    },
+
+    async getAllBids() {
+        return await this.request('/admin/bids');
     }
 };

@@ -32,6 +32,7 @@
                     <a href="#" data-section="overview" class="active"><i class="fas fa-chart-pie"></i> Overview</a>
                     <a href="#" data-section="users"><i class="fas fa-users"></i> Users</a>
                     <a href="#" data-section="auctions"><i class="fas fa-gavel"></i> Auctions</a>
+                    <a href="#" data-section="bids"><i class="fas fa-hand-paper"></i> All Bids</a>
                 </div>
 
                 <div class="admin-content">
@@ -107,6 +108,27 @@
                                     </tr>
                                 </thead>
                                 <tbody id="admin-auctions-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Bids Section -->
+                    <div id="bids" class="admin-panel-section" style="display:none;">
+                        <h2>All Bids</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Bid ID</th>
+                                        <th>User</th>
+                                        <th>Email</th>
+                                        <th>Auction</th>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-bids-body"></tbody>
                             </table>
                         </div>
                     </div>

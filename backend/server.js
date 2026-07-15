@@ -282,6 +282,22 @@ app.delete('/api/admin/users/:id', authenticate, requireAdmin, (req, res) => {
     res.json({ message: 'User deleted' });
 });
 
+app.get('/api/admin/bids', authenticate, requireAdmin, (req, res) => {
+    const db = getDatabase();
+    const bids = db.prepare(`
+        SELECT b.*, 
+               a.title as auction_title,
+               a.category as auction_category,
+               u.email as user_email,
+               u.name as user_name
+        FROM bids b
+        JOIN auctions a ON b.auction_id = a.id
+        JOIN users u ON b.user_id = u.id
+        ORDER BY b.created_at DESC
+    `).all();
+    res.json(bids);
+});
+
 // ===== START SERVER =====
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`BidHub API server running on http://localhost:${PORT}`);
