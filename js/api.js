@@ -2,7 +2,7 @@
 // API Service - Connects frontend to backend
 // ============================================
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://bidhub-api.onrender.com/api';
 
 const ApiService = {
     // Store token
