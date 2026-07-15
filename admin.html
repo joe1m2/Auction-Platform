@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - BidHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-gavel"></i>
+                <span>BidHub</span>
+            </a>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <section class="admin-panel">
+        <div class="container">
+            <div class="admin-header">
+                <h1><i class="fas fa-shield-alt" style="color:var(--primary);"></i> Admin Panel</h1>
+                <p style="color:var(--gray-500);">Manage users, auctions, and platform settings</p>
+            </div>
+
+            <div class="admin-grid">
+                <div class="admin-sidebar">
+                    <a href="#" data-section="overview" class="active"><i class="fas fa-chart-pie"></i> Overview</a>
+                    <a href="#" data-section="users"><i class="fas fa-users"></i> Users</a>
+                    <a href="#" data-section="auctions"><i class="fas fa-gavel"></i> Auctions</a>
+                </div>
+
+                <div class="admin-content">
+                    <!-- Overview Section -->
+                    <div id="overview" class="admin-panel-section">
+                        <h2>Platform Overview</h2>
+                        <div class="dashboard-stats" style="margin-bottom:0;">
+                            <div class="stat-card">
+                                <div class="icon purple"><i class="fas fa-gavel"></i></div>
+                                <div class="info">
+                                    <h3>Total Auctions</h3>
+                                    <div class="num" id="admin-total-auctions">0</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="icon green"><i class="fas fa-play-circle"></i></div>
+                                <div class="info">
+                                    <h3>Active Auctions</h3>
+                                    <div class="num" id="admin-active-auctions">0</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="icon blue"><i class="fas fa-users"></i></div>
+                                <div class="info">
+                                    <h3>Total Users</h3>
+                                    <div class="num" id="admin-total-users">0</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="icon orange"><i class="fas fa-hand-paper"></i></div>
+                                <div class="info">
+                                    <h3>Total Bids</h3>
+                                    <div class="num" id="admin-total-bids">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Users Section -->
+                    <div id="users" class="admin-panel-section" style="display:none;">
+                        <h2>Manage Users</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Joined</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-users-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Auctions Section -->
+                    <div id="auctions" class="admin-panel-section" style="display:none;">
+                        <h2>Manage Auctions</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Seller</th>
+                                        <th>Current Bid</th>
+                                        <th>Bids</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-auctions-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-gavel" style="color:var(--primary-light);"></i> BidHub</h3>
+                <p>Admin panel for platform management.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="auctions.html">Browse Auctions</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BidHub - Online Auction Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

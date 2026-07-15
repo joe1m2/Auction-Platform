@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidHub - Online Auction Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-gavel"></i>
+                <span>BidHub</span>
+            </a>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover, Bid & <span class="highlight">Win</span> Amazing Items</h1>
+            <p>Join thousands of collectors and enthusiasts in the world's most exciting online auction marketplace. Find rare treasures, bid with confidence, and win big.</p>
+            <div class="hero-buttons">
+                <a href="auctions.html" class="btn-primary">
+                    <i class="fas fa-search"></i> Browse Auctions
+                </a>
+                <a href="how-it-works.html" class="btn-secondary">
+                    <i class="fas fa-play-circle"></i> How It Works
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number" id="stat-auctions">0</div>
+            <div class="stat-label">Active Auctions</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="stat-users">0</div>
+            <div class="stat-label">Registered Users</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="stat-bids">0</div>
+            <div class="stat-label">Bids Placed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="stat-value">$0</div>
+            <div class="stat-label">Total Value</div>
+        </div>
+    </div>
+
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse by Category</h2>
+                <p>Find exactly what you're looking for</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card purple" onclick="window.location.href='auctions.html?category=Electronics'">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Electronics</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card pink" onclick="window.location.href='auctions.html?category=Fashion'">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Fashion</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card purple" onclick="window.location.href='auctions.html?category=Art'">
+                    <i class="fas fa-palette"></i>
+                    <h3>Art</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card orange" onclick="window.location.href='auctions.html?category=Collectibles'">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Collectibles</h3>
+                    <span class="count">2 auctions</span>
+                </div>
+                <div class="category-card green" onclick="window.location.href='auctions.html?category=Jewelry'">
+                    <i class="fas fa-gem"></i>
+                    <h3>Jewelry</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card yellow" onclick="window.location.href='auctions.html?category=Watches'">
+                    <i class="fas fa-clock"></i>
+                    <h3>Watches</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card blue" onclick="window.location.href='auctions.html?category=Music'">
+                    <i class="fas fa-music"></i>
+                    <h3>Music</h3>
+                    <span class="count">1 auction</span>
+                </div>
+                <div class="category-card purple" onclick="window.location.href='auctions.html?category=Books'">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Books</h3>
+                    <span class="count">1 auction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Auctions</h2>
+                <p>Premium items curated just for you</p>
+            </div>
+            <div class="auction-grid" id="featured-grid"></div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Get started in three simple steps</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Create an Account</h3>
+                    <p>Sign up for free and complete your profile to start bidding on amazing items.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Browse & Bid</h3>
+                    <p>Explore hundreds of auctions, find items you love, and place your bids with confidence.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Win & Collect</h3>
+                    <p>Outbid the competition, secure your winning items, and have them delivered to your door.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-gavel" style="color:var(--primary-light);"></i> BidHub</h3>
+                <p>The premier online auction platform for collectors and enthusiasts worldwide. Discover rare finds, bid smart, and win big.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="auctions.html">Browse Auctions</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="register.html">Create Account</a>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <a href="auctions.html?category=Electronics">Electronics</a>
+                <a href="auctions.html?category=Art">Art</a>
+                <a href="auctions.html?category=Jewelry">Jewelry</a>
+                <a href="auctions.html?category=Collectibles">Collectibles</a>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BidHub - Online Auction Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

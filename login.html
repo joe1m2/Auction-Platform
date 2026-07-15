@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BidHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-gavel"></i>
+                <span>BidHub</span>
+            </a>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Sign in to your account to continue bidding</p>
+            <form id="login-form" novalidate>
+                <div class="form-group email">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <span class="error-text">Please enter a valid email</span>
+                </div>
+                <div class="form-group password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <span class="error-text">Password is required</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                    <label style="font-size:0.85rem;color:var(--gray-500);display:flex;align-items:center;gap:6px;">
+                        <input type="checkbox" checked> Remember me
+                    </label>
+                    <a href="#" style="font-size:0.85rem;color:var(--primary);font-weight:600;">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-auth">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+            <div class="auth-footer">
+                Don't have an account? <a href="register.html">Create one</a>
+            </div>
+            <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--gray-400);font-size:0.8rem;color:var(--gray-500);text-align:center;">
+                <p><strong>Test Accounts:</strong></p>
+                <p>User: john@example.com / password123</p>
+                <p>Admin: admin@example.com / admin123</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
