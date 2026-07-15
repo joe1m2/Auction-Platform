@@ -2,10 +2,11 @@
   "version": 2,
   "buildCommand": null,
   "outputDirectory": ".",
-  "routes": [
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "to": "/$1"
+      "source": "/(.*)",
+      "destination": "/$1"
     }
   ],
   "headers": [
